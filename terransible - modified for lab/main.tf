@@ -353,7 +353,7 @@ EOD
 
     # New command for the MEAN Stack Ansible playbook
     # command = "sleep 6m && ansible-playbook -i aws_hosts ansiblemean.yml"
-    command = "ansible-playbook -i aws_hosts ansiblemean.yml"
+    # command = "ansible-playbook -i aws_hosts ansiblemean.yml"
   }
 }
 
