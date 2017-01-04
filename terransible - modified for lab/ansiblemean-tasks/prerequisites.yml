@@ -1,0 +1,12 @@
+---
+# File prerequisites.yml
+#
+# Description: Install MEAN stack prerequisites
+#
+# OS Family: Ubuntu
+
+- name: Install git
+  yum:
+    name: git
+    state: present
+    update_cache: yes

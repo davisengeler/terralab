@@ -1,0 +1,29 @@
+---
+# File mongodb.yml
+#
+# Description: Install MongoDB
+#
+# OS Family: Ubuntu
+
+# - name: MongoDB | Import public key
+#   apt_key:
+#     id: EA312927
+#     keyserver: hkp://keyserver.ubuntu.com:80
+#     state: present
+
+- name: MongoDB | Add repository
+  yum_repository:
+    name: MongoDB Repository
+    description: MongoDB Official Repository
+    baseurl: https://repo.mongodb.org/yum/amazon/2013.03/mongodb-org/3.0/x86_64/
+    
+- name: MongoDB | Install MongoDB
+  yum:
+    name: mongodb
+    state: present
+    update_cache: yes
+    
+- name: MongoDB | Ensure that MongoDB is running
+  service:
+    name: mongod
+    state: reloaded

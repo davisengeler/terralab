@@ -1,0 +1,17 @@
+---
+- hosts: dev
+  remote_user: ansible
+#  become: yes
+  become_method: sudo
+  name: Install MEAN Stack
+  vars:
+    temp_folder: /tmp
+  tasks:
+    # Install prerequisites
+    - include: ansiblemean-tasks/prerequisites.yml
+    
+    # Install MongoDB
+    - include: ansiblemean-tasks/mongodb.yml
+
+    # Install Node.js
+    - include: ansiblemean-tasks/nodejs.yml
