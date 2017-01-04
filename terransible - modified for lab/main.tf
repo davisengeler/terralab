@@ -347,14 +347,14 @@ EOF
 EOD
   }
 
-  provisioner "local-exec" {
-    # Command from original course
-    # command = "sleep 6m && ansible-playbook -i aws_hosts wordpress.yml"
+  # provisioner "local-exec" {
+  #   # Command from original course
+  #   # command = "sleep 6m && ansible-playbook -i aws_hosts wordpress.yml"
 
-    # New command for the MEAN Stack Ansible playbook
-    # command = "sleep 6m && ansible-playbook -i aws_hosts ansiblemean.yml"
-    # command = "ansible-playbook -i aws_hosts ansiblemean.yml"
-  }
+  #   # New command for the MEAN Stack Ansible playbook
+  #   # command = "sleep 6m && ansible-playbook -i aws_hosts ansiblemean.yml"
+  #   # command = "ansible-playbook -i aws_hosts ansiblemean.yml"
+  # }
 }
 
 #load balancer
